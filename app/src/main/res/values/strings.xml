@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ViewPagerTabLayoutTwo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="geoaxborot">Geoaxborot</string>
+    <string name="geoaxborot_moduli_orqali_siz_o_zingizga_yaqin_bo_lgan_migrantlar_va_boshqa_muassasalar_haqida_ma_lumot_olishingiz_mumkin">Geoaxborot moduli orqali siz o\'zingizga yaqin bo\'lgan migrantlar va boshqa muassasalar haqida ma\'lumot olishingiz mumkin</string>
+    <string name="todo">TODO</string>
+    <string name="ro_yxatdan_o_tish">Ro\'yxatdan o\'tish</string>
+    <string name="o_tqazib_yuborish">O\'tqazib yuborish</string>
+
+    <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+    </style>
+
+</resources>
