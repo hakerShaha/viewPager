@@ -36,10 +36,6 @@ class ItemViewPagerFragment : Fragment() {
         }
 
 
-
-
-
-
         return binding.root
     }
 

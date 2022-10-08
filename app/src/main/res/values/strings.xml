@@ -7,6 +7,8 @@
     <string name="todo">TODO</string>
     <string name="ro_yxatdan_o_tish">Ro\'yxatdan o\'tish</string>
     <string name="o_tqazib_yuborish">O\'tqazib yuborish</string>
+    <string name="kim_ko_rubdur_ey_ko_ngul_ahli_jahondin_yaxshilig_kimki_ondin_yaxshi_yo_q_ko_z_tutma_ondin_yaxshilig">Kim ko‘rubdur, ey ko‘ngul, ahli jahondin yaxshilig‘, Kimki, ondin yaxshi yo‘q, ko‘z tutma ondin yaxshilig‘</string>
+    <string name="xush_kelibsiz">Xush Kelibsiz</string>
 
     <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
 

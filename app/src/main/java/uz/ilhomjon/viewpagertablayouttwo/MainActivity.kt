@@ -1,7 +1,8 @@
 package uz.ilhomjon.viewpagertablayouttwo
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import uz.ilhomjon.viewpagertablayouttwo.adapter.MyFragmentPagerAdapter
 import uz.ilhomjon.viewpagertablayouttwo.databinding.ActivityMainBinding
@@ -20,18 +21,38 @@ class MainActivity : AppCompatActivity() {
 
         arraList = ArrayList()
 
-        arraList.add(Data(R.drawable.uch.toString(),
-            " Geoaxborot",
-            "Geoaxborot moduli orqali siz o'zingizga yaqin bo'lgan migrantlar va boshqa muassasalar haqida ma'lumot olishingiz mumkin"))
-        arraList.add(Data(R.drawable.bir.toString(),
-            "Huquqiy axborot",
-            "Huquqiy axborot moduli orqali siz migratsiya sohasiga oid yangiliklardan, qonunlardan xabardor bo'lishingiz va online konsultatsiya olishingiz mumkin"))
-        arraList.add(Data(R.drawable.tort.toString(),
-            " To'lovlar xizmatlari",
-            "To'lov xizmatlari moduli orqali siz masofadan turib turli xil xizmatlarga to'lovlar haqida ma'lumot olishingiz va to'lovlarni amalga oshirishingiz mumkin"))
-        arraList.add(Data(R.drawable.ikki.toString(),
-            "Qo'shimcha imkoniyat",
-            "Qo'shimcha imkoniyatlar moduli orqali siz interaktiv so'zlashgichlar va lug'atlar yordamida til bilish savodxonligingizni oshirishingiz mumkin"))
+        arraList.add(
+            Data(
+                R.drawable.photo1.toString(),
+                " Xush kelibsiz",
+                "Kim ko‘rubdur, ey ko‘ngul, ahli jahondin yaxshilig‘, \n" +
+                        "Kimki, ondin yaxshi yo‘q, ko‘z tutma ondin yaxshilig‘"
+            )
+        )
+        arraList.add(
+            Data(
+                R.drawable.photo2.toString(),
+                "Hikoyalar dunyosi",
+                "Gar zamonni nayf qilsam ayb qilma, ey rafiq, \n" +
+                        "Ko‘rmadim hargiz, netoyin, bu zamondin yaxshilig‘ !"
+            )
+        )
+        arraList.add(
+            Data(
+                R.drawable.photo3.toString(),
+                "Kitob ortidan",
+                "Dilrabolardin yomonliq keldi mahzun ko‘ngluma,\n" +
+                        " Kelmadi jonimg'a hech oromi jondin yaxshilig'."
+            )
+        )
+        arraList.add(
+            Data(
+                R.drawable.photo4.toString(),
+                "Bizga qoshiling",
+                "Ey ko‘ngul, chun yaxshidin ko‘rdung yamonliq asru ko‘p,\n" +
+                        " Emdi ko‘z tutmoq ne ma’ni har yamondin yaxshilig'"
+            )
+        )
 
         myFragmentPagerAdapter = MyFragmentPagerAdapter(supportFragmentManager, arraList)
         binding.viewpager.adapter = myFragmentPagerAdapter
@@ -44,7 +65,13 @@ class MainActivity : AppCompatActivity() {
                 positionOffset: Float,
                 positionOffsetPixels: Int,
             ) {
-              index = position
+                index = position
+
+                if (position == 3) {
+                    binding.dale.visibility = View.INVISIBLE
+                } else {
+                    binding.dale.visibility = View.VISIBLE
+                }
             }
 
             override fun onPageSelected(position: Int) {
@@ -57,7 +84,25 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+
+
         binding.skip.setOnClickListener {
+            when (index) {
+                0 -> {
+                    binding.viewpager.currentItem = index + 4
+                }
+                1 -> {
+                    binding.viewpager.currentItem = index + 3
+                }
+                2 -> {
+                    binding.viewpager.currentItem = index + 2
+                }
+                3 -> {
+                    binding.viewpager.currentItem = index + 1
+                }
+            }
+        }
+        binding.dale.setOnClickListener {
             when (index) {
                 0 -> {
                     binding.viewpager.currentItem = index + 1
@@ -70,6 +115,12 @@ class MainActivity : AppCompatActivity() {
                 }
                 3 -> {
                     binding.viewpager.currentItem = index + 1
+
+                }
+                4 -> {
+                    binding.dotsIndicator.setOnClickListener {
+
+                    }
                 }
             }
         }
